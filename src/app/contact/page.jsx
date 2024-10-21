@@ -49,10 +49,10 @@ function ContactForm() {
     <FadeIn className="lg:order-last">
       <form>
         <h2 className="font-display text-base font-semibold text-neutral-950">
-          Work inquiries
+          Contactos
         </h2>
         <div className="isolate mt-6 -space-y-px rounded-2xl bg-white/50">
-          <TextInput label="Name" name="name" autoComplete="name" />
+          <TextInput label="Nome" name="name" autoComplete="name" />
           <TextInput
             label="Email"
             type="email"
@@ -60,26 +60,31 @@ function ContactForm() {
             autoComplete="email"
           />
           <TextInput
-            label="Company"
-            name="company"
-            autoComplete="organization"
+            label="Telefone"
+            type="tel"
+            name="phone"
+            autoComplete="tel"
           />
-          <TextInput label="Phone" type="tel" name="phone" autoComplete="tel" />
-          <TextInput label="Message" name="message" />
+          <TextInput label="Mensagem" name="message" />
           <div className="border border-neutral-300 px-6 py-8 first:rounded-t-2xl last:rounded-b-2xl">
             <fieldset>
-              <legend className="text-base/6 text-neutral-500">Budget</legend>
+              <legend className="text-base/6 text-neutral-500">
+                Motivo de Contacto
+              </legend>
               <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2">
-                <RadioInput label="$25K – $50K" name="budget" value="25" />
-                <RadioInput label="$50K – $100K" name="budget" value="50" />
-                <RadioInput label="$100K – $150K" name="budget" value="100" />
-                <RadioInput label="More than $150K" name="budget" value="150" />
+                <RadioInput label="Marcações" name="motive" value="marcacoes" />
+                <RadioInput
+                  label="Dúvida sobre serviço"
+                  name="motive"
+                  value="duvida"
+                />
+                <RadioInput label="Outro" name="motive" value="outro" />
               </div>
             </fieldset>
           </div>
         </div>
         <Button type="submit" className="mt-10">
-          Let’s work together
+          Submeter
         </Button>
       </form>
     </FadeIn>
@@ -90,42 +95,14 @@ function ContactDetails() {
   return (
     <FadeIn>
       <h2 className="font-display text-base font-semibold text-neutral-950">
-        Our offices
+        A Nossa Clínica
       </h2>
-      <p className="mt-6 text-base text-neutral-600">
-        Prefer doing things in person? We don’t but we have to list our
-        addresses here for legal reasons.
-      </p>
 
       <Offices className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2" />
 
       <Border className="mt-16 pt-16">
         <h2 className="font-display text-base font-semibold text-neutral-950">
-          Email us
-        </h2>
-        <dl className="mt-6 grid grid-cols-1 gap-8 text-sm sm:grid-cols-2">
-          {[
-            ['Careers', 'careers@studioagency.com'],
-            ['Press', 'press@studioagency.com'],
-          ].map(([label, email]) => (
-            <div key={email}>
-              <dt className="font-semibold text-neutral-950">{label}</dt>
-              <dd>
-                <Link
-                  href={`mailto:${email}`}
-                  className="text-neutral-600 hover:text-neutral-950"
-                >
-                  {email}
-                </Link>
-              </dd>
-            </div>
-          ))}
-        </dl>
-      </Border>
-
-      <Border className="mt-16 pt-16">
-        <h2 className="font-display text-base font-semibold text-neutral-950">
-          Follow us
+          Segue-nos
         </h2>
         <SocialMedia className="mt-6" />
       </Border>
@@ -134,15 +111,15 @@ function ContactDetails() {
 }
 
 export const metadata = {
-  title: 'Contact Us',
-  description: 'Let’s work together. We can’t wait to hear from you.',
+  title: 'Contacta-nos',
+  description: 'Vamos trabalhar juntos. Estamos à espera de te receber.',
 }
 
 export default function Contact() {
   return (
     <>
-      <PageIntro eyebrow="Contact us" title="Let’s work together">
-        <p>We can’t wait to hear from you.</p>
+      <PageIntro eyebrow="Contacta-nos" title="Vamos trabalhar juntos">
+        <p>Estamos à espera de te receber</p>
       </PageIntro>
 
       <Container className="mt-24 sm:mt-32 lg:mt-40">

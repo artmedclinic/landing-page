@@ -21,33 +21,46 @@ import imageLeonardKrasner from '@/images/team/leonard-krasner.jpg'
 import imageLeslieAlexander from '@/images/team/leslie-alexander.jpg'
 import imageMichaelFoster from '@/images/team/michael-foster.jpg'
 import imageWhitneyFrancis from '@/images/team/whitney-francis.jpg'
+import imageSara from '@/images/hero.jpg'
 import { loadArticles } from '@/lib/mdx'
 
 function Culture() {
   return (
     <div className="mt-24 rounded-4xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32">
       <SectionIntro
-        eyebrow="Our culture"
-        title="Balance your passion with your passion for life."
+        eyebrow=""
+        title="Conheça a nossa CEO: Dra. Sara Viana"
         invert
       >
         <p>
-          We are a group of like-minded people who share the same core values.
+          A Dra. Sara Viana é a fundadora e CEO da Artmed Clinic, uma
+          profissional apaixonada pela medicina estética e dedicada a
+          proporcionar aos pacientes os melhores resultados possíveis. Com uma
+          formação sólida e uma vasta experiência na área, tem-se destacado como
+          uma referência em tratamentos estéticos e bem-estar.
         </p>
       </SectionIntro>
       <Container className="mt-16">
         <GridList>
-          <GridListItem title="Loyalty" invert>
-            Our team has been with us since the beginning because none of them
-            are allowed to have LinkedIn profiles.
+          <GridListItem title="Formação e Experiência" invert>
+            Graduada em Medicina pela Universidade do Minho, a Dra. Sara Viana
+            especializou-se em Medicina Estética, pela Universidade de Alcalá,
+            realizando diversos cursos de atualização e aperfeiçoamento tanto a
+            nivel nacional como internacional.
           </GridListItem>
-          <GridListItem title="Trust" invert>
-            We don’t care when our team works just as long as they are working
-            every waking second.
+          <GridListItem title="Filosofia de Trabalho" invert>
+            A Dra. Sara Viana acredita que cada paciente é único e merece um
+            atendimento personalizado. A sua filosofia é baseada na escuta
+            ativa, no respeito e na empatia, sempre com o objetivo de entender
+            as necessidades e expectativas de cada um. Está comprometida em
+            promover a beleza natural dos seus pacientes, priorizando técnicas
+            seguras e eficazes.
           </GridListItem>
-          <GridListItem title="Compassion" invert>
-            You never know what someone is going through at home and we make
-            sure to never find out.
+          <GridListItem title="Compromisso com a Excelência" invert>
+            Sob a liderança da Dra. Sara Viana, a Artmed Clinic tem se destacado
+            pela qualidade dos serviços prestados e pela satisfação dos
+            pacientes. Está sempre atenta às inovações e tendências na medicina
+            estética, garantindo que a clínica esteja na vanguarda do setor.
           </GridListItem>
         </GridList>
       </Container>
@@ -57,22 +70,12 @@ function Culture() {
 
 const team = [
   {
-    title: 'Leadership',
+    title: 'Liderança',
     people: [
       {
-        name: 'Leslie Alexander',
-        role: 'Co-Founder / CEO',
-        image: { src: imageLeslieAlexander },
-      },
-      {
-        name: 'Michael Foster',
-        role: 'Co-Founder / CTO',
-        image: { src: imageMichaelFoster },
-      },
-      {
-        name: 'Dries Vincent',
-        role: 'Partner & Business Relations',
-        image: { src: imageDriesVincent },
+        name: 'Dra. Sara Viana',
+        role: 'Fundadora / CEO',
+        image: { src: imageSara },
       },
     ],
   },
@@ -178,9 +181,9 @@ function Team() {
 }
 
 export const metadata = {
-  title: 'About Us',
+  title: 'Sobre Nós',
   description:
-    'We believe that our strength lies in our collaborative approach, which puts our clients at the center of everything we do.',
+    'Na Artmed, acreditamos que a beleza é uma expressão única de cada indivíduo e que todos merecem sentir-se bem na própria pele. ',
 }
 
 export default async function About() {
@@ -188,44 +191,37 @@ export default async function About() {
 
   return (
     <>
-      <PageIntro eyebrow="About us" title="Our strength is collaboration">
+      <PageIntro eyebrow="Sobre Nós" title="A beleza é uma expressão única">
         <p>
-          We believe that our strength lies in our collaborative approach, which
-          puts our clients at the center of everything we do.
+          Na Artmed, acreditamos que a beleza é uma expressão única de cada
+          indivíduo e que todos merecem sentir-se bem na própria pele.
         </p>
         <div className="mt-10 max-w-2xl space-y-6 text-base">
           <p>
-            Studio was started by three friends who noticed that developer
-            studios were charging clients double what an in-house team would
-            cost. Since the beginning, we have been committed to doing things
-            differently by charging triple instead.
+            Localizada em Ponte de Lima, a nossa clínica oferece uma ampla gama
+            de tratamentos de medicina estética, projetados para realçar a tua
+            beleza natural e promover a tua confiança.
           </p>
           <p>
-            At Studio, we’re more than just colleagues — we’re a family. This
-            means we pay very little and expect people to work late. We want our
-            employees to bring their whole selves to work. In return, we just
-            ask that they keep themselves there until at least 6:30pm.
+            Com uma equipa de profissionais altamente qualificados e
+            experientes, utilizamos as técnicas mais avançadas e seguras para
+            proporcionar resultados excepcionais. Desde procedimentos
+            minimamente invasivos até tratamentos personalizados de
+            rejuvenescimento, estamos aqui para te ajudar a alcançar teus
+            objetivos estéticos.
+          </p>
+          <p>
+            O Nosso compromisso é oferecer um atendimento personalizado, onde a
+            tua satisfação e bem-estar são a nossa prioridade. Na Artmed,
+            encontrarás um ambiente acolhedor e profissional, onde cada visita é
+            uma oportunidade para cuidar de ti.
           </p>
         </div>
       </PageIntro>
-      <Container className="mt-16">
-        <StatList>
-          <StatListItem value="35" label="Underpaid employees" />
-          <StatListItem value="52" label="Placated clients" />
-          <StatListItem value="$25M" label="Invoices billed" />
-        </StatList>
-      </Container>
 
       <Culture />
 
       <Team />
-
-      <PageLinks
-        className="mt-24 sm:mt-32 lg:mt-40"
-        title="From the blog"
-        intro="Our team of experienced designers and developers has just one thing on their mind; working on your ideas to draw a smile on the face of your users worldwide. From conducting Brand Sprints to UX Design."
-        pages={blogArticles}
-      />
 
       <ContactSection />
     </>

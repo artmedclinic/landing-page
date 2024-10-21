@@ -7,32 +7,16 @@ import { socialMediaProfiles } from '@/components/SocialMedia'
 
 const navigation = [
   {
-    title: 'Work',
+    title: 'A ArtMed',
     links: [
-      { title: 'FamilyFund', href: '/work/family-fund' },
-      { title: 'Unseal', href: '/work/unseal' },
-      { title: 'Phobia', href: '/work/phobia' },
-      {
-        title: (
-          <>
-            See all <span aria-hidden="true">&rarr;</span>
-          </>
-        ),
-        href: '/work',
-      },
-    ],
-  },
-  {
-    title: 'Company',
-    links: [
-      { title: 'About', href: '/about' },
-      { title: 'Process', href: '/process' },
+      { title: 'Sobre Nós', href: '/about' },
+      { title: 'O Nosso Processo', href: '/process' },
       { title: 'Blog', href: '/blog' },
-      { title: 'Contact us', href: '/contact' },
+      { title: 'Contacta-nos', href: '/contact' },
     ],
   },
   {
-    title: 'Connect',
+    title: 'Segue-nos',
     links: socialMediaProfiles,
   },
 ]
@@ -82,16 +66,15 @@ function NewsletterForm() {
   return (
     <form className="max-w-sm">
       <h2 className="font-display text-sm font-semibold tracking-wider text-neutral-950">
-        Sign up for our newsletter
+        Faça parte da nossa rede de contactos
       </h2>
       <p className="mt-4 text-sm text-neutral-700">
-        Subscribe to get the latest design news, articles, resources and
-        inspiration.
+        Inscreva-se para estar sempre a par das últimas notícias da ArtMed.
       </p>
       <div className="relative mt-6">
         <input
           type="email"
-          placeholder="Email address"
+          placeholder="Endereço de email"
           autoComplete="email"
           aria-label="Email address"
           className="block w-full rounded-2xl border border-neutral-300 bg-transparent py-4 pl-6 pr-20 text-base/6 text-neutral-950 ring-4 ring-transparent transition placeholder:text-neutral-500 focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5"
@@ -125,7 +108,7 @@ export function Footer() {
             <Logo className="h-8" fillOnHover />
           </Link>
           <p className="text-sm text-neutral-700">
-            © Studio Agency Inc. {new Date().getFullYear()}
+            © ArtMed Clinic {new Date().getFullYear()}
           </p>
         </div>
       </FadeIn>

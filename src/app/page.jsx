@@ -126,8 +126,8 @@ function Services() {
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          Agende uma consulta de avaliação e venha conhecer como podemos
-          transformar a sua experiência de beleza!
+          Agenda uma consulta de avaliação e vem conhecer como podemos
+          transformar a tua experiência de beleza!
         </p>
       </SectionIntro>
       <Container className="mt-16">
@@ -136,7 +136,6 @@ function Services() {
             <FadeIn className="w-[33.75rem] flex-none lg:w-[45rem]">
               <StylizedImage
                 src={imageServices}
-                shape={0}
                 sizes="(min-width: 1024px) 41rem, 31rem"
                 className="justify-center lg:justify-end"
               />
@@ -208,9 +207,9 @@ export default async function Home() {
           </div>
           <FadeIn className="hidden w-[33.75rem] lg:block lg:w-[30rem]">
             <StylizedImage
-              {...imageHero}
+              src={imageHero}
               sizes="(min-width: 1024px) 41rem, 31rem"
-              className="justify-center lg:justify-end lg:group-even/section:justify-start"
+              className="justify-center lg:justify-end"
             />
           </FadeIn>
         </div>

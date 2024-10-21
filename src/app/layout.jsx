@@ -4,8 +4,9 @@ import '@/styles/tailwind.css'
 
 export const metadata = {
   title: {
-    template: '%s - Studio',
-    default: 'Studio - Award winning developer studio based in Denmark',
+    template: '%s - ArtMed',
+    default:
+      'ArtMed - Descobre a beleza que sempre sonhaste, com o cuidado que mereces',
   },
 }
 

@@ -169,7 +169,7 @@ function Services() {
 
 export const metadata = {
   description:
-    'We are a development studio working at the intersection of design and technology.',
+    'Realça a tua beleza com tratamentos estéticos de alta qualidade. Na nossa clínica oferecemos cuidados personalizados, desde rejuvenescimento facial até remodelação corporal, sempre com resultados naturais e seguros.',
 }
 
 export default async function Home() {
@@ -180,12 +180,14 @@ export default async function Home() {
       <Container className="mt-24 sm:mt-32 md:mt-56">
         <FadeIn className="max-w-3xl">
           <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
-            Award-winning development studio based in Denmark.
+            Descobre a beleza que sempre sonhaste, com o cuidado que mereces.
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
-            We are a development studio working at the intersection of design
-            and technology. It’s a really busy intersection though — a lot of
-            our staff have been involved in hit and runs.
+            Na Artmed, acreditamos que a beleza é uma expressão única de cada
+            indivíduo e que todos merecem sentir-se bem na própria pele.
+            Localizada em Ponte de Lima, a nossa clínica oferece uma ampla gama
+            de tratamentos de medicina estética, projetados para realçar a sua
+            beleza natural e promover a sua confiança.
           </p>
         </FadeIn>
       </Container>

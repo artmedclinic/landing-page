@@ -122,7 +122,7 @@ function Services() {
     <>
       <SectionIntro
         eyebrow="Serviços"
-        title="Descubra como podemos ajudá-lo a revelar a sua melhor versão."
+        title="Descubra como podemos ajudá&#x2011;lo a revelar a sua melhor versão."
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>

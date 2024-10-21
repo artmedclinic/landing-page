@@ -64,7 +64,17 @@ function ArrowIcon(props) {
 
 function NewsletterForm() {
   return (
-    <form className="max-w-sm">
+    <form
+      className="max-w-sm"
+      action="https://api.staticforms.xyz/submit"
+      method="post"
+    >
+      <input
+        type="hidden"
+        name="accessKey"
+        value="c00a62a1-088e-4353-8ceb-15ef041e1c0e"
+      />
+      <input type="hidden" name="$newsletter" value="Want to get news" />
       <h2 className="font-display text-sm font-semibold tracking-wider text-neutral-950">
         Faça parte da nossa rede de contactos
       </h2>
@@ -74,12 +84,14 @@ function NewsletterForm() {
       <div className="relative mt-6">
         <input
           type="email"
+          name="email"
           placeholder="Endereço de email"
           autoComplete="email"
           aria-label="Email address"
           className="block w-full rounded-2xl border border-neutral-300 bg-transparent py-4 pl-6 pr-20 text-base/6 text-neutral-950 ring-4 ring-transparent transition placeholder:text-neutral-500 focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5"
         />
         <div className="absolute inset-y-1 right-1 flex justify-end">
+          <input type="hidden" name="redirectTo" value="http://artmed.netlify.app?success=true" />
           <button
             type="submit"
             aria-label="Submit"

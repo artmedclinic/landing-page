@@ -47,7 +47,12 @@ function RadioInput({ label, ...props }) {
 function ContactForm() {
   return (
     <FadeIn className="lg:order-last">
-      <form>
+      <form action="https://api.staticforms.xyz/submit" method="post">
+        <input
+          type="hidden"
+          name="accessKey"
+          value="c00a62a1-088e-4353-8ceb-15ef041e1c0e"
+        />
         <h2 className="font-display text-base font-semibold text-neutral-950">
           Contactos
         </h2>
@@ -72,17 +77,26 @@ function ContactForm() {
                 Motivo de Contacto
               </legend>
               <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2">
-                <RadioInput label="Marcações" name="motive" value="marcacoes" />
+                <RadioInput
+                  label="Marcações"
+                  name="$motive"
+                  value="marcacoes"
+                />
                 <RadioInput
                   label="Dúvida sobre serviço"
-                  name="motive"
+                  name="$motive"
                   value="duvida"
                 />
-                <RadioInput label="Outro" name="motive" value="outro" />
+                <RadioInput label="Outro" name="$motive" value="outro" />
               </div>
             </fieldset>
           </div>
         </div>
+        <input
+          type="hidden"
+          name="redirectTo"
+          value="http://artmed.netlify.app/contact?success=true"
+        />
         <Button type="submit" className="mt-10">
           Submeter
         </Button>

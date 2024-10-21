@@ -17,7 +17,8 @@ import logoNorthAdventures from '@/images/clients/north-adventures/logo-light.sv
 import logoPhobiaDark from '@/images/clients/phobia/logo-dark.svg'
 import logoPhobiaLight from '@/images/clients/phobia/logo-light.svg'
 import logoUnseal from '@/images/clients/unseal/logo-light.svg'
-import imageLaptop from '@/images/laptop.jpg'
+import imageServices from '@/images/services.jpg'
+import imageHero from '@/images/hero.jpg'
 import { loadCaseStudies } from '@/lib/mdx'
 
 const clients = [
@@ -120,13 +121,13 @@ function Services() {
   return (
     <>
       <SectionIntro
-        eyebrow="Services"
-        title="We help you identify, explore and respond to new opportunities."
+        eyebrow="Serviços"
+        title="Descubra como podemos ajudá-lo a revelar a sua melhor versão."
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          As long as those opportunities involve giving us money to re-purpose
-          old projects — we can come up with an endless number of those.
+          Agende uma consulta de avaliação e venha conhecer como podemos
+          transformar a sua experiência de beleza!
         </p>
       </SectionIntro>
       <Container className="mt-16">
@@ -134,28 +135,39 @@ function Services() {
           <div className="flex justify-center lg:w-1/2 lg:justify-end lg:pr-12">
             <FadeIn className="w-[33.75rem] flex-none lg:w-[45rem]">
               <StylizedImage
-                src={imageLaptop}
+                src={imageServices}
+                shape={0}
                 sizes="(min-width: 1024px) 41rem, 31rem"
                 className="justify-center lg:justify-end"
               />
             </FadeIn>
           </div>
           <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
-            <ListItem title="Web development">
+            <ListItem title="Medicina Estética e Regenerativa">
               We specialise in crafting beautiful, high quality marketing pages.
               The rest of the website will be a shell that uses lorem ipsum
               everywhere.
             </ListItem>
-            <ListItem title="Application development">
+            <ListItem title="Nutrição">
               We have a team of skilled developers who are experts in the latest
               app frameworks, like Angular 1 and Google Web Toolkit.
             </ListItem>
-            <ListItem title="E-commerce">
+            <ListItem title="Psicologia">
               We are at the forefront of modern e-commerce development. Which
               mainly means adding your logo to the Shopify store template we’ve
               used for the past six years.
             </ListItem>
-            <ListItem title="Custom content management">
+            <ListItem title="Medicina Geral e Familiar">
+              At Studio we understand the importance of having a robust and
+              customised CMS. That’s why we run all of our client projects out
+              of a single, enormous Joomla instance.
+            </ListItem>
+            <ListItem title="Massagens">
+              At Studio we understand the importance of having a robust and
+              customised CMS. That’s why we run all of our client projects out
+              of a single, enormous Joomla instance.
+            </ListItem>
+            <ListItem title="Limpeza de Pele">
               At Studio we understand the importance of having a robust and
               customised CMS. That’s why we run all of our client projects out
               of a single, enormous Joomla instance.
@@ -178,18 +190,30 @@ export default async function Home() {
   return (
     <>
       <Container className="mt-24 sm:mt-32 md:mt-56">
-        <FadeIn className="max-w-3xl">
-          <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
-            Descobre a beleza que sempre sonhaste, com o cuidado que mereces.
-          </h1>
-          <p className="mt-6 text-xl text-neutral-600">
-            Na Artmed, acreditamos que a beleza é uma expressão única de cada
-            indivíduo e que todos merecem sentir-se bem na própria pele.
-            Localizada em Ponte de Lima, a nossa clínica oferece uma ampla gama
-            de tratamentos de medicina estética, projetados para realçar a sua
-            beleza natural e promover a sua confiança.
-          </p>
-        </FadeIn>
+        <div className="lg:flex lg:items-center lg:gap-x-8">
+          <div className="mt-12 lg:mt-0 lg:flex-none">
+            <FadeIn className="max-w-3xl">
+              <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
+                Descobre a beleza que sempre sonhaste, com o cuidado que
+                mereces.
+              </h1>
+              <p className="mt-6 text-xl text-neutral-600">
+                Na Artmed, acreditamos que a beleza é uma expressão única de
+                cada indivíduo e que todos merecem sentir-se bem na própria
+                pele. Localizada em Ponte de Lima, a nossa clínica oferece uma
+                ampla gama de tratamentos de medicina estética, projetados para
+                realçar a sua beleza natural e promover a sua confiança.
+              </p>
+            </FadeIn>
+          </div>
+          <FadeIn className="hidden w-[33.75rem] lg:block lg:w-[30rem]">
+            <StylizedImage
+              {...imageHero}
+              sizes="(min-width: 1024px) 41rem, 31rem"
+              className="justify-center lg:justify-end lg:group-even/section:justify-start"
+            />
+          </FadeIn>
+        </div>
       </Container>
 
       <Clients />

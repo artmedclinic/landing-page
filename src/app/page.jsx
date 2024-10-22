@@ -18,7 +18,9 @@ import logoPhobiaDark from '@/images/clients/phobia/logo-dark.svg'
 import logoPhobiaLight from '@/images/clients/phobia/logo-light.svg'
 import logoUnseal from '@/images/clients/unseal/logo-light.svg'
 import imageServices from '@/images/services.jpg'
+import imageClinic from '@/images/clinic.jpg'
 import imageHero from '@/images/hero.jpg'
+import imageBlakeReid from '@/images/team/blake-reid.jpg'
 import { loadCaseStudies } from '@/lib/mdx'
 
 const clients = [
@@ -178,9 +180,105 @@ function Services() {
   )
 }
 
+function Treatments() {
+  return (
+    <>
+      <SectionIntro
+        eyebrow="Medicina Estética e Regenerativa"
+        title="Tratamentos estéticos personalizados para realçar a sua beleza natural"
+        className="mt-24 sm:mt-32 lg:mt-40"
+      >
+        <p>
+          Na Artmed, disponibilizamos uma variedade de tratamentos estéticos,
+          todos projetados para atender às tuas necessidades e realçar tua
+          beleza natural. Confere abaixo alguns dos principais serviços que
+          oferecemos:
+        </p>
+      </SectionIntro>
+      <Container className="mt-16">
+        <div className="lg:flex lg:justify-end">
+          <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pr-4">
+            <ListItem title="Avaliação profunda da qualidade da pele">
+              We specialise in crafting beautiful, high quality marketing pages.
+              The rest of the website will be a shell that uses lorem ipsum
+              everywhere.
+            </ListItem>
+            <ListItem title="Plasma Rico em Plaquetas">
+              Plasma rico em Plaquetas, mesoterapia e microagulhamento
+            </ListItem>
+            <ListItem title="Terapia Capilar">
+              Para a regeneração capilar, que estimula o crescimento dos fios e
+              melhora a saúde do couro cabeludo.
+            </ListItem>
+            <ListItem title="Toxina botulínica">
+              Este tratamento minimamente invasivo ajuda a suavizar linhas de
+              expressão e rugas, proporcionando um aspecto mais jovem e relaxado
+              ao rosto. Além disso, permite tratar a sudorese excessiva em áreas
+              como axilas, mãos e pés, proporcionando conforto e qualidade de
+              vida.
+            </ListItem>
+            <ListItem title="Preenchimento com Ácido Hialurónico">
+              Utilizados para restaurar o volume perdido e definir contornos
+              faciais, os preenchimentos são uma excelente opção para lábios,
+              bochechas e sulcos nasogenianos.
+            </ListItem>
+            <ListItem title="Hidratação Profunda da Pele"></ListItem>
+            <ListItem title="Biostimuladores de colagénio">
+              São indicados para melhorar a firmeza e a elasticidade da pele,
+              além de atenuar rugas e flacidez. Os efeitos são progressivos e
+              duradouros, proporcionando uma aparência mais jovem e saudável. Os
+              biostimuladores são frequentemente utilizados em áreas como o
+              rosto, pescoço e mãos.
+            </ListItem>
+            <ListItem title="Exion - Microagulhamento com Radiofrequência">
+              Um tratamento que utiliza pequenas agulhas para criar microlesões
+              na pele, estimulando a produção de colágeno e melhorando a textura
+              e a elasticidade da pele. É eficaz para cicatrizes de acne, linhas
+              finas e poros dilatados.
+            </ListItem>
+            <ListItem title="Exion - Radiofrequência facial">
+              São indicados para melhorar a firmeza e a elasticidade da pele,
+              além de atenuar rugas e flacidez. Os efeitos são progressivos e
+              duradouros, proporcionando uma aparência mais jovem e saudável. Os
+              biostimuladores são frequentemente utilizados em áreas como o
+              rosto, pescoço e mãos.
+            </ListItem>
+            <ListItem title="Exion - Radiofrequência corporal">
+              Uma técnica eficaz para o rejuvenescimento corporal, que utiliza
+              energia para estimular a produção de colágeno, melhorando a
+              firmeza da pele e diminuição de gordura localizada.
+            </ListItem>
+            <ListItem title="Lumecca">
+              Luz pulsada intensa: Uma tecnologia que trata manchas, vasos
+              sanguíneos e sinais de envelhecimento da pele, promovendo uma
+              aparência mais uniforme e rejuvenescida.
+            </ListItem>
+            <ListItem title="Vasculaze">Tratamento de derrames</ListItem>
+            <ListItem title="Microagulhamento"></ListItem>
+            <ListItem title="Peeling químico">
+              Este procedimento remove as camadas superficiais da pele,
+              promovendo a renovação celular e melhorando a textura, tom e
+              aparência geral da pele.
+            </ListItem>
+          </List>
+          <div className="sticky top-0 flex justify-center self-start lg:w-1/2 lg:justify-end lg:pl-12">
+            <FadeIn className="w-[33.75rem] flex-none lg:w-[45rem]">
+              <StylizedImage
+                src={imageClinic}
+                sizes="(min-width: 1024px) 41rem, 31rem"
+                className="justify-center lg:justify-end"
+              />
+            </FadeIn>
+          </div>
+        </div>
+      </Container>
+    </>
+  )
+}
+
 export const metadata = {
   description:
-    'Realça a tua beleza com tratamentos estéticos de alta qualidade. Na nossa clínica oferecemos cuidados personalizados, desde rejuvenescimento facial até remodelação corporal, sempre com resultados naturais e seguros.',
+    'Realçe a sua beleza com tratamentos estéticos de alta qualidade. Na nossa clínica oferecemos cuidados personalizados, desde rejuvenescimento facial até remodelação corporal, sempre com resultados naturais e seguros.',
 }
 
 export default async function Home() {
@@ -193,8 +291,7 @@ export default async function Home() {
           <div className="mt-12 lg:mt-0 lg:flex-none">
             <FadeIn className="max-w-3xl">
               <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
-                Descobre a beleza que sempre sonhaste, com o cuidado que
-                mereces.
+                Descubra a beleza que sempre sonhou, com o cuidado que merece.
               </h1>
               <p className="mt-6 text-xl text-neutral-600">
                 Na Artmed, acreditamos que a beleza é uma expressão única de
@@ -215,21 +312,19 @@ export default async function Home() {
         </div>
       </Container>
 
-      {/* <CaseStudies caseStudies={caseStudies} /> */}
-
       <Services />
 
       <Clients />
 
-      <Services />
+      <Treatments />
 
       <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
-        client={{ name: 'Phobia', logo: logoPhobiaDark }}
+        client={{ name: 'Jose Cerqueira', photo: imageBlakeReid }}
       >
-        The team at Studio went above and beyond with our onboarding, even
-        finding a way to access the user’s microphone without triggering one of
-        those annoying permission dialogs.
+        Serviço excelente! Fiz um tratamento de medicina estética e fiquei muito
+        satisfeito com os resultados. Equipa profissional e atenciosa. Recomendo
+        a quem procura um serviço de qualidade.
       </Testimonial>
 
       <ContactSection />

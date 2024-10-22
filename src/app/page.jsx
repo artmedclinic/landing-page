@@ -215,9 +215,13 @@ export default async function Home() {
         </div>
       </Container>
 
+      {/* <CaseStudies caseStudies={caseStudies} /> */}
+
+      <Services />
+
       <Clients />
 
-      <CaseStudies caseStudies={caseStudies} />
+      <Services />
 
       <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
@@ -227,8 +231,6 @@ export default async function Home() {
         finding a way to access the user’s microphone without triggering one of
         those annoying permission dialogs.
       </Testimonial>
-
-      <Services />
 
       <ContactSection />
     </>

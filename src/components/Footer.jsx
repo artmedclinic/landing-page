@@ -72,7 +72,7 @@ function NewsletterForm() {
       <input
         type="hidden"
         name="accessKey"
-        value="c00a62a1-088e-4353-8ceb-15ef041e1c0e"
+        value="93cffe97-b43c-4b02-abc8-7f5ac9aa8198"
       />
       <input type="hidden" name="$newsletter" value="Want to get news" />
       <h2 className="font-display text-sm font-semibold tracking-wider text-neutral-950">
@@ -91,7 +91,11 @@ function NewsletterForm() {
           className="block w-full rounded-2xl border border-neutral-300 bg-transparent py-4 pl-6 pr-20 text-base/6 text-neutral-950 ring-4 ring-transparent transition placeholder:text-neutral-500 focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5"
         />
         <div className="absolute inset-y-1 right-1 flex justify-end">
-          <input type="hidden" name="redirectTo" value="http://artmed.netlify.app?success=true" />
+          <input
+            type="hidden"
+            name="redirectTo"
+            value="http://artmed.netlify.app?success=true"
+          />
           <button
             type="submit"
             aria-label="Submit"

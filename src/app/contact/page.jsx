@@ -51,7 +51,7 @@ function ContactForm() {
         <input
           type="hidden"
           name="accessKey"
-          value="c00a62a1-088e-4353-8ceb-15ef041e1c0e"
+          value="93cffe97-b43c-4b02-abc8-7f5ac9aa8198"
         />
         <h2 className="font-display text-base font-semibold text-neutral-950">
           Contactos
@@ -119,7 +119,7 @@ function ContactDetails() {
           Telefone
         </h2>
         <dl className="mt-6 grid grid-cols-1 gap-8 text-sm sm:grid-cols-2">
-          {[['ArtMed Clinic', '253 435 789']].map(([label, phone]) => (
+          {[['ArtMed Clinic', '928 104 544']].map(([label, phone]) => (
             <div key={phone}>
               <dt className="font-semibold text-neutral-950">{label}</dt>
               <dd>

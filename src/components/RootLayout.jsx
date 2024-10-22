@@ -72,7 +72,7 @@ function Header({
         </Link>
         <div className="flex items-center gap-x-8">
           <Button href="/contact" invert={invert}>
-            Contacta-nos
+            Contacte-nos
           </Button>
           <button
             ref={toggleRef}
@@ -220,7 +220,7 @@ function RootLayoutInner({ children }) {
                   </div>
                   <div className="sm:border-l sm:border-transparent sm:pl-16">
                     <h2 className="font-display text-base font-semibold text-white">
-                      Segue-nos
+                      Siga-nos
                     </h2>
                     <SocialMedia className="mt-6" invert />
                   </div>

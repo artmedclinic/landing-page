@@ -10,13 +10,12 @@ const navigation = [
     title: 'A ArtMed',
     links: [
       { title: 'Sobre Nós', href: '/about' },
-      { title: 'O Nosso Processo', href: '/process' },
-      { title: 'Blog', href: '/blog' },
-      { title: 'Contacta-nos', href: '/contact' },
+      { title: 'Tratamentos', href: '/work' },
+      { title: 'Contacte-nos', href: '/contact' },
     ],
   },
   {
-    title: 'Segue-nos',
+    title: 'Siga-nos',
     links: socialMediaProfiles,
   },
 ]

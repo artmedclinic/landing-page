@@ -174,11 +174,6 @@ function ContactDetails() {
   )
 }
 
-// export const metadata = {
-//   title: 'Contacte-nos',
-//   description: 'Vamos trabalhar juntos. Estamos à espera de o receber.',
-// }
-
 export default function Contact() {
   return (
     <>

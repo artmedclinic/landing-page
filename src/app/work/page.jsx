@@ -9,7 +9,8 @@ import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
 import { Testimonial } from '@/components/Testimonial'
-import logoBrightPath from '@/images/clients/bright-path/logo-dark.svg'
+import beforeAfter1 from '@/images/services/before-after-1.jpeg'
+import beforeAfter2 from '@/images/services/before-after-2.jpeg'
 import logoFamilyFund from '@/images/clients/family-fund/logo-dark.svg'
 import logoGreenLife from '@/images/clients/green-life/logo-dark.svg'
 import logoHomeWork from '@/images/clients/home-work/logo-dark.svg'
@@ -17,44 +18,58 @@ import logoMailSmirk from '@/images/clients/mail-smirk/logo-dark.svg'
 import logoNorthAdventures from '@/images/clients/north-adventures/logo-dark.svg'
 import logoPhobia from '@/images/clients/phobia/logo-dark.svg'
 import logoUnseal from '@/images/clients/unseal/logo-dark.svg'
+import imageBlakeReid from '@/images/team/blake-reid.jpg'
 import { formatDate } from '@/lib/formatDate'
 import { loadCaseStudies } from '@/lib/mdx'
 
-function CaseStudies({ caseStudies }) {
+const caseStudies = [
+  {
+    name: 'Phobia',
+    photo: beforeAfter1,
+    image: { src: beforeAfter1 },
+    title: 'Preenchimento com Ácido Hialurónico',
+    description:
+      'Unseal is the first NFT platform where users can mint and trade NFTs of their own personal health records, allowing them to take control of their data.',
+    summary: [
+      'Unseal is the first NFT platform where users can mint and trade NFTs of their own personal health records, allowing them to take control of their data.',
+      'We built out the blockchain infrastructure that supports Unseal. Unfortunately, we took a massive loss on this project when Unseal’s cryptocurrency, PlaceboCoin, went to zero.',
+    ],
+    date: '2022-10',
+    service: 'Blockchain development',
+    href: '/',
+  },
+  {
+    name: 'Phobia',
+    photo: beforeAfter2,
+    image: { src: beforeAfter2 },
+    title: 'Preenchimento com Ácido Hialurónico',
+    description:
+      'Unseal is the first NFT platform where users can mint and trade NFTs of their own personal health records, allowing them to take control of their data.',
+    summary: [
+      'Unseal is the first NFT platform where users can mint and trade NFTs of their own personal health records, allowing them to take control of their data.',
+      'We built out the blockchain infrastructure that supports Unseal. Unfortunately, we took a massive loss on this project when Unseal’s cryptocurrency, PlaceboCoin, went to zero.',
+    ],
+    date: '2022-10',
+    service: 'Blockchain development',
+    href: '/',
+  },
+]
+
+function CaseStudies() {
   return (
     <Container className="mt-40">
       <FadeIn>
         <h2 className="font-display text-2xl font-semibold text-neutral-950">
-          Case studies
+          Casos de Estudo
         </h2>
       </FadeIn>
       <div className="mt-10 space-y-20 sm:space-y-24 lg:space-y-32">
         {caseStudies.map((caseStudy) => (
-          <FadeIn key={caseStudy.client}>
+          <FadeIn key={caseStudy.name}>
             <article>
               <Border className="grid grid-cols-3 gap-x-8 gap-y-8 pt-16">
                 <div className="col-span-full sm:flex sm:items-center sm:justify-between sm:gap-x-8 lg:col-span-1 lg:block">
-                  <div className="sm:flex sm:items-center sm:gap-x-6 lg:block">
-                    <Image
-                      src={caseStudy.logo}
-                      alt=""
-                      className="h-16 w-16 flex-none"
-                      unoptimized
-                    />
-                    <h3 className="mt-6 text-sm font-semibold text-neutral-950 sm:mt-0 lg:mt-8">
-                      {caseStudy.client}
-                    </h3>
-                  </div>
-                  <div className="mt-1 flex gap-x-4 sm:mt-0 lg:block">
-                    <p className="text-sm tracking-tight text-neutral-950 after:ml-4 after:font-semibold after:text-neutral-300 after:content-['/'] lg:mt-2 lg:after:hidden">
-                      {caseStudy.service}
-                    </p>
-                    <p className="text-sm text-neutral-950 lg:mt-2">
-                      <time dateTime={caseStudy.date}>
-                        {formatDate(caseStudy.date)}
-                      </time>
-                    </p>
-                  </div>
+                  <Image src={caseStudy.photo} alt="" className="flex-none" />
                 </div>
                 <div className="col-span-full lg:col-span-2 lg:max-w-2xl">
                   <p className="font-display text-4xl font-medium text-neutral-950">
@@ -64,14 +79,6 @@ function CaseStudies({ caseStudies }) {
                     {caseStudy.summary.map((paragraph) => (
                       <p key={paragraph}>{paragraph}</p>
                     ))}
-                  </div>
-                  <div className="mt-8 flex">
-                    <Button
-                      href={caseStudy.href}
-                      aria-label={`Read case study: ${caseStudy.client}`}
-                    >
-                      Read case study
-                    </Button>
                   </div>
                   {caseStudy.testimonial && (
                     <Blockquote
@@ -91,50 +98,9 @@ function CaseStudies({ caseStudies }) {
   )
 }
 
-const clients = [
-  ['Phobia', logoPhobia],
-  ['Family Fund', logoFamilyFund],
-  ['Unseal', logoUnseal],
-  ['Mail Smirk', logoMailSmirk],
-  ['Home Work', logoHomeWork],
-  ['Green Life', logoGreenLife],
-  ['Bright Path', logoBrightPath],
-  ['North Adventures', logoNorthAdventures],
-]
-
-function Clients() {
-  return (
-    <Container className="mt-24 sm:mt-32 lg:mt-40">
-      <FadeIn>
-        <h2 className="font-display text-2xl font-semibold text-neutral-950">
-          You’re in good company
-        </h2>
-      </FadeIn>
-      <FadeInStagger className="mt-10" faster>
-        <Border as={FadeIn} />
-        <ul
-          role="list"
-          className="grid grid-cols-2 gap-x-8 gap-y-12 sm:grid-cols-3 lg:grid-cols-4"
-        >
-          {clients.map(([client, logo]) => (
-            <li key={client} className="group">
-              <FadeIn className="overflow-hidden">
-                <Border className="pt-12 group-[&:nth-child(-n+2)]:-mt-px sm:group-[&:nth-child(3)]:-mt-px lg:group-[&:nth-child(4)]:-mt-px">
-                  <Image src={logo} alt={client} unoptimized />
-                </Border>
-              </FadeIn>
-            </li>
-          ))}
-        </ul>
-      </FadeInStagger>
-    </Container>
-  )
-}
-
 export const metadata = {
-  title: 'Our Work',
-  description:
-    'We believe in efficiency and maximizing our resources to provide the best value to our clients.',
+  title: 'Tratamentos',
+  description: 'Transforme-se com os Nossos Tratamentos de Estética Avançada',
 }
 
 export default async function Work() {
@@ -143,13 +109,16 @@ export default async function Work() {
   return (
     <>
       <PageIntro
-        eyebrow="Our work"
-        title="Proven solutions for real-world problems."
+        eyebrow="Tratamentos"
+        title="Transforme-se com os Nossos Tratamentos de Estética Avançada"
       >
         <p>
-          We believe in efficiency and maximizing our resources to provide the
-          best value to our clients. The primary way we do that is by re-using
-          the same five projects we’ve been developing for the past decade.
+          Na Artmed, acreditamos que cada pessoa é única e merece um cuidado
+          estético à sua medida. Com uma equipa de especialistas e tecnologias
+          de última geração, oferecemos tratamentos avançados e personalizados
+          para realçar a tua beleza natural, mantendo sempre a segurança e a
+          qualidade como prioridades. Explore as nossas soluções e descobre como
+          podemos ajudá-lo a alcançar os seus objetivos de estética e bem-estar.
         </p>
       </PageIntro>
 
@@ -157,13 +126,12 @@ export default async function Work() {
 
       <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
-        client={{ name: 'Mail Smirk', photo: logoMailSmirk }}
+        client={{ name: 'Jose Cerqueira', photo: imageBlakeReid }}
       >
-        We approached <em>Studio</em> because we loved their past work. They
-        delivered something remarkably similar in record time.
+        Serviço excelente! Fiz um tratamento de medicina estética e fiquei muito
+        satisfeito com os resultados. Equipa profissional e atenciosa. Recomendo
+        a quem procura um serviço de qualidade.
       </Testimonial>
-
-      <Clients />
 
       <ContactSection />
     </>

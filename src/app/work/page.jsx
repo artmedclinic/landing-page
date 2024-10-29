@@ -4,12 +4,14 @@ import Link from 'next/link'
 import { Blockquote } from '@/components/Blockquote'
 import { Border } from '@/components/Border'
 import { Button } from '@/components/Button'
+import { ComparisonSlider } from '@/components/ComparisonSlider'
 import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
 import { Testimonial } from '@/components/Testimonial'
-import beforeAfter1 from '@/images/services/before-after-1.jpeg'
+import before1 from '@/images/services/before-1.jpeg'
+import after1 from '@/images/services/after-1.jpeg'
 import beforeAfter2 from '@/images/services/before-after-2.jpeg'
 import logoFamilyFund from '@/images/clients/family-fund/logo-dark.svg'
 import logoGreenLife from '@/images/clients/green-life/logo-dark.svg'
@@ -24,35 +26,35 @@ import { loadCaseStudies } from '@/lib/mdx'
 
 const caseStudies = [
   {
-    name: 'Phobia',
-    photo: beforeAfter1,
-    image: { src: beforeAfter1 },
+    name: 'Phobia 1',
+    beforeImage: before1,
+    afterImage: after1,
     title: 'Preenchimento com Ácido Hialurónico',
     description:
       'Unseal is the first NFT platform where users can mint and trade NFTs of their own personal health records, allowing them to take control of their data.',
     summary: [
-      'Unseal is the first NFT platform where users can mint and trade NFTs of their own personal health records, allowing them to take control of their data.',
-      'We built out the blockchain infrastructure that supports Unseal. Unfortunately, we took a massive loss on this project when Unseal’s cryptocurrency, PlaceboCoin, went to zero.',
+      'Uma paciente de 42 anos procurou a nossa clínica com o objetivo de suavizar as linhas de expressão e restaurar o volume perdido nas maçãs do rosto e nos lábios. Com o passar do tempo, o seu rosto apresentava sinais de envelhecimento, como sulcos nasogenianos (entre o nariz e a boca), perda de volume nas bochechas e lábios mais finos. A paciente desejava um tratamento que proporcionasse uma aparência rejuvenescida e natural, sem recorrer a métodos invasivos.',
+      'Após uma avaliação detalhada, foi decidido optar pelo preenchimento com Ácido Hialurónico. Este é um tratamento minimamente invasivo, que permite preencher rugas e devolver volume ao rosto, respeitando a harmonia facial da paciente. Foram identificadas as áreas específicas para aplicação do ácido hialurónico, focando-se nos sulcos nasogenianos, maçãs do rosto e contorno dos lábios. A substância foi cuidadosamente injetada em pontos estratégicos para criar um efeito de lifting e melhorar a hidratação e elasticidade da pele.',
     ],
     date: '2022-10',
     service: 'Blockchain development',
     href: '/',
   },
-  {
-    name: 'Phobia',
-    photo: beforeAfter2,
-    image: { src: beforeAfter2 },
-    title: 'Preenchimento com Ácido Hialurónico',
-    description:
-      'Unseal is the first NFT platform where users can mint and trade NFTs of their own personal health records, allowing them to take control of their data.',
-    summary: [
-      'Unseal is the first NFT platform where users can mint and trade NFTs of their own personal health records, allowing them to take control of their data.',
-      'We built out the blockchain infrastructure that supports Unseal. Unfortunately, we took a massive loss on this project when Unseal’s cryptocurrency, PlaceboCoin, went to zero.',
-    ],
-    date: '2022-10',
-    service: 'Blockchain development',
-    href: '/',
-  },
+  // {
+  //   name: 'Phobia',
+  //   photo: beforeAfter2,
+  //   image: { src: beforeAfter2 },
+  //   title: 'Preenchimento com Ácido Hialurónico',
+  //   description:
+  //     'Unseal is the first NFT platform where users can mint and trade NFTs of their own personal health records, allowing them to take control of their data.',
+  //   summary: [
+  //     'Unseal is the first NFT platform where users can mint and trade NFTs of their own personal health records, allowing them to take control of their data.',
+  //     'We built out the blockchain infrastructure that supports Unseal. Unfortunately, we took a massive loss on this project when Unseal’s cryptocurrency, PlaceboCoin, went to zero.',
+  //   ],
+  //   date: '2022-10',
+  //   service: 'Blockchain development',
+  //   href: '/',
+  // },
 ]
 
 function CaseStudies() {
@@ -69,11 +71,15 @@ function CaseStudies() {
             <article>
               <Border className="grid grid-cols-3 gap-x-8 gap-y-8 pt-16">
                 <div className="col-span-full sm:flex sm:items-center sm:justify-between sm:gap-x-8 lg:col-span-1 lg:block">
-                  <Image src={caseStudy.photo} alt="" className="flex-none" />
+                  <ComparisonSlider
+                    beforeImage={caseStudy.beforeImage}
+                    afterImage={caseStudy.afterImage}
+                    className="flex-none"
+                  />
                 </div>
                 <div className="col-span-full lg:col-span-2 lg:max-w-2xl">
                   <p className="font-display text-4xl font-medium text-neutral-950">
-                    <Link href={caseStudy.href}>{caseStudy.title}</Link>
+                    {caseStudy.title}
                   </p>
                   <div className="mt-6 space-y-6 text-base text-neutral-600">
                     {caseStudy.summary.map((paragraph) => (
@@ -96,11 +102,6 @@ function CaseStudies() {
       </div>
     </Container>
   )
-}
-
-export const metadata = {
-  title: 'Tratamentos',
-  description: 'Transforme-se com os Nossos Tratamentos de Estética Avançada',
 }
 
 export default async function Work() {

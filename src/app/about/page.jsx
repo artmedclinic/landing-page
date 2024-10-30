@@ -15,19 +15,26 @@ import { loadArticles } from '@/lib/mdx'
 function Culture() {
   return (
     <div className="mt-24 rounded-4xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32">
-      <SectionIntro
-        eyebrow=""
-        title="Conheça a nossa CEO: Dra. Sara Viana"
-        invert
-      >
-        <p>
-          A Dra. Sara Viana é a fundadora e CEO da Artmed Clinic, uma
-          profissional apaixonada pela medicina estética e dedicada a
-          proporcionar aos pacientes os melhores resultados possíveis. Com uma
-          formação sólida e uma vasta experiência na área, tem-se destacado como
-          uma referência em tratamentos estéticos e bem-estar.
-        </p>
-      </SectionIntro>
+      <div className="mx-auto mt-16 flex max-w-7xl flex-col px-6 lg:flex-row lg:px-8">
+        <SectionIntro
+          eyebrow=""
+          title="Conheça a nossa CEO: Dra. Sara Viana"
+          invert
+        >
+          <p>
+            A Dra. Sara Viana é a fundadora e CEO da Artmed Clinic, uma
+            profissional apaixonada pela medicina estética e dedicada a
+            proporcionar aos pacientes os melhores resultados possíveis. Com uma
+            formação sólida e uma vasta experiência na área, tem-se destacado
+            como uma referência em tratamentos estéticos e bem-estar.
+          </p>
+        </SectionIntro>
+        <Image
+          alt="Dra. Sara Viana"
+          src={imageSara}
+          className="h-68 object-none pt-8 grayscale transition duration-500 motion-safe:group-hover:scale-105 lg:h-96 lg:pt-0"
+        />
+      </div>
       <Container className="mt-16">
         <GridList>
           <GridListItem title="Formação e Experiência" invert>
@@ -158,8 +165,6 @@ export default async function About() {
       </PageIntro>
 
       <Culture />
-
-      <Team />
 
       <ContactSection />
     </>

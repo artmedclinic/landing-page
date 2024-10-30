@@ -32,7 +32,7 @@ function Culture() {
         <Image
           alt="Dra. Sara Viana"
           src={imageSara}
-          className="h-68 object-none pt-8 grayscale transition duration-500 motion-safe:group-hover:scale-105 lg:h-96 lg:pt-0"
+          className="h-96 object-cover pt-8 grayscale transition duration-500 motion-safe:group-hover:scale-105 lg:pt-0"
         />
       </div>
       <Container className="mt-16">

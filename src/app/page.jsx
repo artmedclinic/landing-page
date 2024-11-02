@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
+import { Button } from '@/components/Button'
 import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
@@ -8,39 +9,49 @@ import { List, ListItem } from '@/components/List'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
 import { Testimonial } from '@/components/Testimonial'
-import logoBrightPath from '@/images/clients/bright-path/logo-light.svg'
-import logoFamilyFund from '@/images/clients/family-fund/logo-light.svg'
-import logoGreenLife from '@/images/clients/green-life/logo-light.svg'
-import logoHomeWork from '@/images/clients/home-work/logo-light.svg'
-import logoMailSmirk from '@/images/clients/mail-smirk/logo-light.svg'
-import logoNorthAdventures from '@/images/clients/north-adventures/logo-light.svg'
-import logoPhobiaDark from '@/images/clients/phobia/logo-dark.svg'
-import logoPhobiaLight from '@/images/clients/phobia/logo-light.svg'
-import logoUnseal from '@/images/clients/unseal/logo-light.svg'
+import imageInmode from '@/images/machine1.png'
+import imageExion from '@/images/machine2.png'
 import imageServices from '@/images/services.jpg'
 import imageClinic from '@/images/clinic.jpg'
 import imageHero from '@/images/hero.jpg'
 import imageBlakeReid from '@/images/team/blake-reid.jpg'
 import { loadCaseStudies } from '@/lib/mdx'
 
+function ContactCTA() {
+  return (
+    <div className="mt-24 rounded-4xl bg-neutral-950 py-10 sm:mt-32 sm:py-16 lg:mt-56">
+      <Container>
+        <FadeIn className="-mx-6 rounded-4xl bg-neutral-950 px-6 sm:mx-0 md:px-12">
+          <div className="mx-auto max-w-4xl">
+            <div className="max-w-2xl">
+              <h2 className="font-display text-3xl font-medium text-white [text-wrap:balance] sm:text-4xl">
+                Vamos transformar a sua experiência de beleza
+              </h2>
+              <div className="mt-6 flex">
+                <Button href="/contact" invert>
+                  Contacte-nos
+                </Button>
+              </div>
+            </div>
+          </div>
+        </FadeIn>
+      </Container>
+    </div>
+  )
+}
+
 const clients = [
-  ['Phobia', logoPhobiaLight],
-  ['Family Fund', logoFamilyFund],
-  ['Unseal', logoUnseal],
-  ['Mail Smirk', logoMailSmirk],
-  ['Home Work', logoHomeWork],
-  ['Green Life', logoGreenLife],
-  ['Bright Path', logoBrightPath],
-  ['North Adventures', logoNorthAdventures],
+  ['Inmode', imageInmode],
+  ['Exion', imageExion],
 ]
 
-function Clients() {
+function Machines() {
   return (
     <div className="mt-24 rounded-4xl bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56">
       <Container>
         <FadeIn className="flex items-center gap-x-8">
           <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
-            We’ve worked with hundreds of amazing people
+            Equipamento de Última Geração para Resultados Excepcionais
           </h2>
           <div className="h-px flex-auto bg-neutral-800" />
         </FadeIn>
@@ -49,10 +60,15 @@ function Clients() {
             role="list"
             className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4"
           >
-            {clients.map(([client, logo]) => (
-              <li key={client}>
+            {clients.map(([name, logo]) => (
+              <li key={name} className="flex">
                 <FadeIn>
-                  <Image src={logo} alt={client} unoptimized />
+                  <Image
+                    src={logo}
+                    alt={name}
+                    className="h-64 w-auto object-fill grayscale"
+                  />
+                  <p className="text-white">{name}</p>
                 </FadeIn>
               </li>
             ))}
@@ -199,66 +215,174 @@ function Treatments() {
         <div className="lg:flex lg:justify-end">
           <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pr-4">
             <ListItem title="Avaliação profunda da qualidade da pele">
-              We specialise in crafting beautiful, high quality marketing pages.
-              The rest of the website will be a shell that uses lorem ipsum
-              everywhere.
+              A consulta de avaliação de Medicina Estética é um momento crucial.
+              Durante a consulta, o paciente poderá expressar as suas
+              preocupações e expectativas. O médico irá realizar uma avaliação
+              detalhada, levando em conta fatores como idade, tipo de pele,
+              histórico de saúde e objetivos pessoais. A qualidade da pele é um
+              dos fatores analisados de forma profunda com recurso a uma
+              tecnologia desenvolvida para quantificar aspectos como manchas,
+              rugas, hidratação e danos solares. Após a avaliação, o
+              profissional pode sugerir diferentes opções de tratamento, que
+              podem incluir procedimentos não invasivos. O médico também irá
+              esclarecer sobre os riscos, benefícios e cuidados
+              pós-procedimento, garantindo que o paciente tome uma decisão
+              informada. Além da parte estética, a consulta de medicina estética
+              também foca na saúde geral da pele e no bem-estar do paciente. A
+              abordagem é holística, considerando não apenas a aparência, mas
+              também a saúde emocional e a autoconfiança. Essa consulta é,
+              portanto, um passo importante para quem procura não apenas
+              mudanças externas, mas uma verdadeira transformação em sua
+              autoestima e qualidade de vida.
             </ListItem>
             <ListItem title="Plasma Rico em Plaquetas">
-              Plasma rico em Plaquetas, mesoterapia e microagulhamento
+              O PRP é um concentrado de plaquetas obtido a partir do próprio
+              sangue do paciente. Essas plaquetas contêm fatores de crescimento
+              que estimulam a regeneração celular, a produção de colágeno e
+              elastina, e a formação de novos vasos sanguíneos. este
+              procedimento tem diversas indicações como no rejuvenescimento
+              facial, melhorando a textura da pele, reduzindo rugas finas,
+              aumentando a luminosidade e a firmeza, no tratamento de alopecia,
+              uma vez que estimula o crescimento capilar, na cicatrização de
+              feridas, acelerando o processo de cicatrização e melhorando o
+              aspecto das cicatrizes. Além disso, pode ser aplicado em diversas
+              áreas do corpo como o rosto, pescoço, decote, couro cabeludo,
+              barriga, glúteos, etc.
             </ListItem>
             <ListItem title="Terapia Capilar">
-              Para a regeneração capilar, que estimula o crescimento dos fios e
-              melhora a saúde do couro cabeludo.
+              A terapia capilar na medicina estética é um conjunto de
+              tratamentos que visam melhorar a saúde e o aspecto do cabelo e
+              couro cabeludo. Abrangendo desde a prevenção da queda de cabelo
+              até o tratamento de condições mais complexas, como a alopecia. A
+              terapia capilar pode ser feita em mesoterapia, que consiste na
+              aplicação de microinjeções no couro cabeludo com substâncias que
+              estimulam o crescimento capilar, com plasma rico em plaquetas para
+              estimular a regeneração dos tecidos e através de tratamentos
+              tópicos e orais.
             </ListItem>
             <ListItem title="Toxina botulínica">
-              Este tratamento minimamente invasivo ajuda a suavizar linhas de
-              expressão e rugas, proporcionando um aspecto mais jovem e relaxado
-              ao rosto. Além disso, permite tratar a sudorese excessiva em áreas
-              como axilas, mãos e pés, proporcionando conforto e qualidade de
-              vida.
+              A toxina botulínica, popularmente conhecida como Botox, é uma
+              substância purificada que, quando injetada em pequenas
+              quantidades, bloqueia as transmissões nervosas nos músculos,
+              relaxando-os. Na Medicina Estética, é usada para suavizar rugas e
+              linhas de expressão, proporcionando um aspecto mais jovem e
+              natural. Pode ser utilizada nas rugas de expressão: Linhas de
+              expressão na testa, entre as sobrancelhas e ao redor dos olhos,
+              para a elevação das sobrancelhas, para o tratamento de sorriso
+              gengival e para o suor excessivo.
             </ListItem>
             <ListItem title="Preenchimento com Ácido Hialurónico">
               Utilizados para restaurar o volume perdido e definir contornos
               faciais, os preenchimentos são uma excelente opção para lábios,
               bochechas e sulcos nasogenianos.
             </ListItem>
-            <ListItem title="Hidratação Profunda da Pele"></ListItem>
             <ListItem title="Biostimuladores de colagénio">
-              São indicados para melhorar a firmeza e a elasticidade da pele,
-              além de atenuar rugas e flacidez. Os efeitos são progressivos e
-              duradouros, proporcionando uma aparência mais jovem e saudável. Os
-              biostimuladores são frequentemente utilizados em áreas como o
-              rosto, pescoço e mãos.
+              O ácido hialurônico é uma substância natural do corpo, responsável
+              por manter a hidratação e a elasticidade da pele. Em procedimentos
+              estéticos, ele é utilizado para preencher rugas, linhas de
+              expressão e aumentar o volume em áreas como lábios e maçãs do
+              rosto. Assim, tem diversas aplicabilidades como no
+              rejuvenescimento, na hidratação, na devolução do contorno facial e
+              volume perdido ao longo dos anos. : Aumenta o volume em áreas como
+              lábios e maçãs do rosto.
             </ListItem>
-            <ListItem title="Exion - Microagulhamento com Radiofrequência">
-              Um tratamento que utiliza pequenas agulhas para criar microlesões
-              na pele, estimulando a produção de colágeno e melhorando a textura
-              e a elasticidade da pele. É eficaz para cicatrizes de acne, linhas
-              finas e poros dilatados.
-            </ListItem>
-            <ListItem title="Exion - Radiofrequência facial">
-              São indicados para melhorar a firmeza e a elasticidade da pele,
-              além de atenuar rugas e flacidez. Os efeitos são progressivos e
-              duradouros, proporcionando uma aparência mais jovem e saudável. Os
-              biostimuladores são frequentemente utilizados em áreas como o
-              rosto, pescoço e mãos.
-            </ListItem>
-            <ListItem title="Exion - Radiofrequência corporal">
-              Uma técnica eficaz para o rejuvenescimento corporal, que utiliza
-              energia para estimular a produção de colágeno, melhorando a
-              firmeza da pele e diminuição de gordura localizada.
+            <ListItem title="Exion">
+              O Exion é um dispositivo de última geração da BTL Aesthetics que
+              oferece uma abordagem completa para tratamentos de pele. Com
+              múltiplas tecnologias e aplicadores, ele permite personalizar os
+              tratamentos para cada paciente e suas necessidades específicas .O
+              Exion utiliza radiofrequência fracionada para estimular a produção
+              de colágeno e elastina, promovendo a renovação celular e
+              melhorando a textura e o tônus da pele. Principais benefícios do
+              Exion:
+              <ul className="pl-4 pt-2">
+                <li>
+                  <b>Versatilidade</b>: Trata uma ampla gama de condições da
+                  pele, desde rugas e flacidez até cicatrizes e estrias.
+                </li>
+                <li className="pt-2">
+                  <b>Precisão</b>: A tecnologia inteligente garante uma
+                  aplicação precisa e uniforme da energia, minimizando o
+                  desconforto.
+                </li>
+                <li className="pt-2">
+                  <b>Eficácia</b>: Resultados visíveis em diversas áreas do
+                  corpo, com menos tempo de recuperação.
+                </li>
+                <li className="pt-2">
+                  <b>Personalização</b>: Tratamentos personalizados para cada
+                  paciente, com diferentes níveis de energia e profundidade.
+                </li>
+              </ul>
             </ListItem>
             <ListItem title="Lumecca">
-              Luz pulsada intensa: Uma tecnologia que trata manchas, vasos
-              sanguíneos e sinais de envelhecimento da pele, promovendo uma
-              aparência mais uniforme e rejuvenescida.
+              A Lumecca é um dos equipamentos de luz pulsada intensa (IPL) mais
+              poderosos do mercado, desenvolvido pela InMode. Esta tecnologia é
+              utilizada para tratar diversas condições da pele, como:
+              <ul className="py-2 pl-4">
+                <li>
+                  <b>Manchas</b>: Melasma, sardas, manchas de sol e outras
+                  discromias.
+                </li>
+                <li className="pt-2">
+                  <b>Vasinhos</b>: Telangiectasias e rosácea.
+                </li>
+                <li className="pt-2">
+                  <b>Envelhecimento</b>: Rugas finas, textura irregular e danos
+                  causados pelo sol.
+                </li>
+                <li className="pt-2">
+                  <b>Outros</b>: Acne ativa e cicatrizes de acne.
+                </li>
+              </ul>
+              A Lumecca emite pulsos de luz intensa que penetram na pele,
+              quebrando a melanina (pigmento) e a hemoglobina (presente nos
+              vasos sanguíneos). Isso leva à redução das manchas, vasinhos e
+              outros problemas de pigmentação, estimulando a produção de
+              colágeno e elastina, o que resulta em uma pele mais firme e
+              rejuvenescida. Os resultados são rápidos e eficazes, em apenas
+              algumas sessões, é possível notar uma melhora significativa na
+              aparência da pele.
             </ListItem>
-            <ListItem title="Vasculaze">Tratamento de derrames</ListItem>
-            <ListItem title="Microagulhamento"></ListItem>
+            <ListItem title="Vasculaze">
+              O Vasculaze é um equipamento de última geração da InMode,
+              especialmente desenvolvido para o tratamento de lesões vasculares.
+              Essa tecnologia utiliza a energia do laser para coagular os vasos
+              sanguíneos afetados, promovendo sua absorção pelo organismo e
+              eliminando a aparência de derrames.
+              <div className="pt-2"></div>
+              Indicações:
+              <ul className="py-2 pl-4">
+                <li>
+                  <b>Varizes</b>: Veias dilatadas e tortuosas, geralmente nas
+                  pernas.
+                </li>
+                <li className="pt-2">
+                  <b>Aranhas vasculares</b>: Pequenos vasos sanguíneos
+                  dilatados, com aparência de teias de aranha.
+                </li>
+                <li className="pt-2">
+                  <b>Angiomas</b>: Tumores benignos formados por vasos
+                  sanguíneos.
+                </li>
+                <li className="pt-2">
+                  <b>Telangiectasias</b>: Dilatação de pequenos vasos sanguíneos
+                  na pele.
+                </li>
+              </ul>
+            </ListItem>
             <ListItem title="Peeling químico">
-              Este procedimento remove as camadas superficiais da pele,
-              promovendo a renovação celular e melhorando a textura, tom e
-              aparência geral da pele.
+              O peeling químico é um tratamento que utiliza ácidos para remover
+              as camadas superficiais da pele. Essa renovação estimula o
+              crescimento de novas células, deixando a pele mais lisa, uniforme
+              e com menos manchas e rugas. Tem diversas indicações como manchas,
+              acne, rugas e textura da dele. Pode ser superficial, médio ou
+              profundo. O ácido aplicado causa uma descamação controlada,
+              removendo as células danificadas. A pele regenera-se, produzindo
+              colágeno e elastina, o que proporciona um aspecto mais jovem e
+              saudável. Os resultados variam de acordo com o tipo de peeling e
+              as características individuais da pele. Geralmente, são observados
+              melhora na textura, redução de manchas e um viço mais saudável.
             </ListItem>
           </List>
           <div className="sticky top-0 flex justify-center self-start lg:w-1/2 lg:justify-end lg:pl-12">
@@ -314,7 +438,7 @@ export default async function Home() {
 
       <Services />
 
-      <Clients />
+      <ContactCTA />
 
       <Treatments />
 

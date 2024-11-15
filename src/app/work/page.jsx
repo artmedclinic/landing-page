@@ -43,7 +43,7 @@ function CaseStudies() {
         </h2>
       </FadeIn>
       <div className="mt-10 space-y-20 sm:space-y-24 lg:space-y-32">
-        <Border className="grid grid-cols-3 gap-x-8 gap-y-8 pt-16">
+        <Border className="grid grid-cols-1 gap-x-8 gap-y-8 pt-16 lg:grid-cols-3">
           {caseStudies.map((caseStudy) => (
             <FadeIn key={caseStudy.name}>
               <div className="col-span-full sm:flex sm:items-center sm:justify-between sm:gap-x-8 lg:col-span-1 lg:block">

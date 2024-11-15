@@ -161,33 +161,47 @@ function Services() {
           </div>
           <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
             <ListItem title="Medicina Estética e Regenerativa">
-              We specialise in crafting beautiful, high quality marketing pages.
-              The rest of the website will be a shell that uses lorem ipsum
-              everywhere.
+              É um campo em crescimento que combina princípios da medicina
+              tradicional com técnicas inovadoras para melhorar a aparência e a
+              saúde da pele, além de promover a regeneração celular. Estas duas
+              áreas, quando combinadas, oferecem uma abordagem holística,
+              focando não apenas na aparência externa, mas também na saúde e
+              bem-estar do paciente.
+            </ListItem>
+            <ListItem title="Tricologio">
+              A área que se dedica ao fio e ao couro cabeludo. Envolve a análise
+              de diferentes condições capilares, como a queda de cabelo, caspa,
+              dermatite seborreica, alopecia, entre outras. O tratamento pode
+              variar de acordo com a causa subjacente.
             </ListItem>
             <ListItem title="Nutrição">
-              We have a team of skilled developers who are experts in the latest
-              app frameworks, like Angular 1 and Google Web Toolkit.
+              A consulta envolve a avaliação das necessidades dietéticas
+              individuais e a elaboração de planos alimentares que atendam às
+              metas de saúde específicas de cada pessoa.
             </ListItem>
             <ListItem title="Psicologia">
-              We are at the forefront of modern e-commerce development. Which
-              mainly means adding your logo to the Shopify store template we’ve
-              used for the past six years.
+              Na consulta vai encontrar a ajuda necessária paraa compreender e
+              lidar com problemas que podem ser causa de tristeza,
+              irritabilidade, alterações do sono, desmotivação, falta de energia
+              para atividades em geral, ansiedade, entre outras.
             </ListItem>
             <ListItem title="Medicina Geral e Familiar">
-              At Studio we understand the importance of having a robust and
-              customised CMS. That’s why we run all of our client projects out
-              of a single, enormous Joomla instance.
+              É uma especialidade médica globalizante vocacionada para a
+              prestação de cuidados primários, que acompanha a evolução do
+              doente como um todo nas várias etapas da vida, asseguram uma
+              medicina de prevenção e promoção da saúde.
             </ListItem>
-            <ListItem title="Massagens">
-              At Studio we understand the importance of having a robust and
-              customised CMS. That’s why we run all of our client projects out
-              of a single, enormous Joomla instance.
+            <ListItem title="Fisioterapia/Massagem/Drenagem">
+              A Fisioterapia tem como finalidade preservar/melhorar a
+              funcionalidade física e reduzir eventuais incapacidades. Inclui
+              uma ampla gama de técnicas que pressupõem o tratamento de
+              problemas do foro osteoarticular, muscular, neurológico,
+              respiratório, assim como de distúrbios da marcha e do equilíbrio
+              postural.
             </ListItem>
             <ListItem title="Limpeza de Pele">
-              At Studio we understand the importance of having a robust and
-              customised CMS. That’s why we run all of our client projects out
-              of a single, enormous Joomla instance.
+              A limpeza de pele tem como objetivo eliminar impurezas, prevenir o
+              surgimento de rugas e estimular a regeneração celular.
             </ListItem>
           </List>
         </div>
@@ -218,36 +232,21 @@ function Treatments() {
               A consulta de avaliação de Medicina Estética é um momento crucial.
               Durante a consulta, o paciente poderá expressar as suas
               preocupações e expectativas. O médico irá realizar uma avaliação
-              detalhada, levando em conta fatores como idade, tipo de pele,
-              histórico de saúde e objetivos pessoais. A qualidade da pele é um
-              dos fatores analisados de forma profunda com recurso a uma
-              tecnologia desenvolvida para quantificar aspectos como manchas,
-              rugas, hidratação e danos solares. Após a avaliação, o
-              profissional pode sugerir diferentes opções de tratamento, que
-              podem incluir procedimentos não invasivos. O médico também irá
-              esclarecer sobre os riscos, benefícios e cuidados
-              pós-procedimento, garantindo que o paciente tome uma decisão
-              informada. Além da parte estética, a consulta de medicina estética
-              também foca na saúde geral da pele e no bem-estar do paciente. A
-              abordagem é holística, considerando não apenas a aparência, mas
-              também a saúde emocional e a autoconfiança. Essa consulta é,
-              portanto, um passo importante para quem procura não apenas
-              mudanças externas, mas uma verdadeira transformação em sua
-              autoestima e qualidade de vida.
+              detalhada,sendo a qualidade da pele um dos fatores analisados de
+              forma profunda com recurso a uma tecnologia desenvolvida para
+              quantificar aspectos como manchas, rugas, hidratação e danos
+              solares.
             </ListItem>
             <ListItem title="Plasma Rico em Plaquetas">
               O PRP é um concentrado de plaquetas obtido a partir do próprio
-              sangue do paciente. Essas plaquetas contêm fatores de crescimento
-              que estimulam a regeneração celular, a produção de colágeno e
-              elastina, e a formação de novos vasos sanguíneos. este
-              procedimento tem diversas indicações como no rejuvenescimento
-              facial, melhorando a textura da pele, reduzindo rugas finas,
-              aumentando a luminosidade e a firmeza, no tratamento de alopecia,
-              uma vez que estimula o crescimento capilar, na cicatrização de
-              feridas, acelerando o processo de cicatrização e melhorando o
-              aspecto das cicatrizes. Além disso, pode ser aplicado em diversas
-              áreas do corpo como o rosto, pescoço, decote, couro cabeludo,
-              barriga, glúteos, etc.
+              sangue do paciente. Este procedimento tem diversas indicações como
+              no rejuvenescimento facial, melhorando a textura da pele,
+              reduzindo rugas finas, aumentando a luminosidade e a firmeza, no
+              tratamento de alopecia, uma vez que estimula o crescimento
+              capilar, na cicatrização de feridas, acelerando o processo de
+              cicatrização e melhorando o aspecto das cicatrizes. Além disso,
+              pode ser aplicado em diversas áreas do corpo como o rosto,
+              pescoço, decote, couro cabeludo, barriga, glúteos, etc.
             </ListItem>
             <ListItem title="Terapia Capilar">
               A terapia capilar na medicina estética é um conjunto de
@@ -272,11 +271,6 @@ function Treatments() {
               gengival e para o suor excessivo.
             </ListItem>
             <ListItem title="Preenchimento com Ácido Hialurónico">
-              Utilizados para restaurar o volume perdido e definir contornos
-              faciais, os preenchimentos são uma excelente opção para lábios,
-              bochechas e sulcos nasogenianos.
-            </ListItem>
-            <ListItem title="Biostimuladores de colagénio">
               O ácido hialurônico é uma substância natural do corpo, responsável
               por manter a hidratação e a elasticidade da pele. Em procedimentos
               estéticos, ele é utilizado para preencher rugas, linhas de
@@ -285,6 +279,30 @@ function Treatments() {
               rejuvenescimento, na hidratação, na devolução do contorno facial e
               volume perdido ao longo dos anos. : Aumenta o volume em áreas como
               lábios e maçãs do rosto.
+            </ListItem>
+            <ListItem title="Biostimuladores de colagénio">
+              Os bioestimuladores de colágeno são substâncias que estimulam a
+              produção natural de colágeno na pele, proporcionando um efeito
+              rejuvenescedor e revitalizante. Estimulam a produção de colágeno,
+              uma vez que aceleram a sua produção. Com o aumento da produção de
+              colágeno, existe uma reestruturação da pele, tornando-a mais
+              firme, as rugas são suavizadas e o contorno facial fica mais
+              definido. Os resultados naturais e graduais. Os mais comuns são:
+              <ul className="pl-4 pt-2">
+                <li>
+                  <b>Ácido hialurônico (profhilo)</b>: Além de hidratar a pele,
+                  estimula a produção de colágeno.
+                </li>
+                <li className="pt-2">
+                  <b>Ácido poli-L-láctico (Sculptra)</b>: Proporciona um lifting
+                  gradual e prolongado, ideal para tratar flacidez e perda de
+                  volume.
+                </li>
+                <li className="pt-2">
+                  <b>Hidroxiapatita de cálcio (Radiesse)</b>: Estimula a
+                  produção de colágeno e promove um efeito lifting imediato.
+                </li>
+              </ul>
             </ListItem>
             <ListItem title="Exion">
               O Exion é um dispositivo de última geração da BTL Aesthetics que
@@ -378,11 +396,7 @@ function Treatments() {
               e com menos manchas e rugas. Tem diversas indicações como manchas,
               acne, rugas e textura da dele. Pode ser superficial, médio ou
               profundo. O ácido aplicado causa uma descamação controlada,
-              removendo as células danificadas. A pele regenera-se, produzindo
-              colágeno e elastina, o que proporciona um aspecto mais jovem e
-              saudável. Os resultados variam de acordo com o tipo de peeling e
-              as características individuais da pele. Geralmente, são observados
-              melhora na textura, redução de manchas e um viço mais saudável.
+              removendo as células danificadas.
             </ListItem>
           </List>
           <div className="sticky top-0 flex justify-center self-start lg:w-1/2 lg:justify-end lg:pl-12">

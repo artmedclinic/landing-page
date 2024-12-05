@@ -62,11 +62,6 @@ const caseStudies = [
     image: imageCabelo,
   },
   {
-    name: 'Cabelo',
-    description: 'Após 1 sessão de tratamento capilar',
-    image: imageCabelo,
-  },
-  {
     name: 'Cabelo 2',
     description: '3 sessões de terapia capilar',
     image: imageCabelo2,

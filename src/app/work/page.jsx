@@ -10,27 +10,81 @@ import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
 import { Testimonial } from '@/components/Testimonial'
-import beforeAfter1 from '@/images/services/beforeAfter1.jpg'
-import beforeAfter2 from '@/images/services/beforeAfter2.jpg'
-import logoFamilyFund from '@/images/clients/family-fund/logo-dark.svg'
-import logoGreenLife from '@/images/clients/green-life/logo-dark.svg'
-import logoHomeWork from '@/images/clients/home-work/logo-dark.svg'
-import logoMailSmirk from '@/images/clients/mail-smirk/logo-dark.svg'
-import logoNorthAdventures from '@/images/clients/north-adventures/logo-dark.svg'
-import logoPhobia from '@/images/clients/phobia/logo-dark.svg'
-import logoUnseal from '@/images/clients/unseal/logo-dark.svg'
+import imageVasculaze from '@/images/services/vasculaze.jpeg'
+import imagePreenchimento from '@/images/services/preenchimento.jpeg'
+import imageBotoxLabios from '@/images/services/botox-labios.jpeg'
+import imageBotoxTesta from '@/images/services/botox-testa.jpeg'
+import imagePreenchimentoLabios from '@/images/services/preenchimento-labios.jpeg'
+import imageBotoxRugas from '@/images/services/botox-rugas-2.jpeg'
+import imageCabelo from '@/images/services/cabelo.jpeg'
+import imageCabelo2 from '@/images/services/cabelo-2.jpeg'
+import imageLumecca from '@/images/services/lumecca.jpeg'
+import imageLumecca2 from '@/images/services/lumecca-2.jpeg'
+import imageAcido from '@/images/services/acido.jpeg'
 import imageBlakeReid from '@/images/team/blake-reid.jpg'
 import { formatDate } from '@/lib/formatDate'
 import { loadCaseStudies } from '@/lib/mdx'
 
 const caseStudies = [
   {
-    name: 'Pele',
-    image: beforeAfter1,
+    name: 'Vasculaze',
+    description: 'Após 1 sessão de Vasculaze',
+    image: imageVasculaze,
   },
   {
-    name: 'Pele 2',
-    image: beforeAfter2,
+    name: 'Preenchimento',
+    description: 'Após preenchimento labial',
+    image: imagePreenchimento,
+  },
+  {
+    name: 'Botox Labios',
+    description: 'Após correção de sorriso gengival com aplicação de Botox',
+    image: imageBotoxLabios,
+  },
+  {
+    name: 'Botox Testa',
+    description: 'Tratamento de rugas de expressão com Botox',
+    image: imageBotoxTesta,
+  },
+  {
+    name: 'Preenchimento Labios',
+    description: 'Preenchimento Labial',
+    image: imagePreenchimentoLabios,
+  },
+  {
+    name: 'Botox Rugas',
+    description: 'Tratamento de rugas de expressão com aplicação de Botox',
+    image: imageBotoxRugas,
+  },
+  {
+    name: 'Cabelo',
+    description: 'Após 1 sessão de tratamento capilar',
+    image: imageCabelo,
+  },
+  {
+    name: 'Cabelo',
+    description: 'Após 1 sessão de tratamento capilar',
+    image: imageCabelo,
+  },
+  {
+    name: 'Cabelo 2',
+    description: '3 sessões de terapia capilar',
+    image: imageCabelo2,
+  },
+  {
+    name: 'Lumecca',
+    description: 'Após 1 sessão de Lumecca',
+    image: imageLumecca,
+  },
+  {
+    name: 'Lumecca 2',
+    description: 'Após 1 sessão de Lumecca',
+    image: imageLumecca2,
+  },
+  {
+    name: 'Acido Hialuronico',
+    description: 'Preenchimento com ácido Hialurónico',
+    image: imageAcido,
   },
 ]
 
@@ -52,6 +106,7 @@ function CaseStudies() {
                   alt={caseStudy.name}
                   className="h-96 w-auto object-fill"
                 />
+                <p>{caseStudy.description}</p>
               </div>
             </FadeIn>
           ))}

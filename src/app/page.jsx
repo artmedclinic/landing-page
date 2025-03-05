@@ -400,7 +400,7 @@ function Treatments() {
             </ListItem>
             <ListItem title="Liftera">
               O Liftera é um ultrassom microfocado que estimula a produção de
-              colagenio e elastina, promovendo um efeito lifting e melhorando a
+              colagénio e elastina, promovendo um efeito lifting e melhorando a
               firmeza da pele. Além disso, também é utilizado para redução de
               gordura localizada como na região da “papada”.
             </ListItem>

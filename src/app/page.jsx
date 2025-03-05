@@ -398,6 +398,12 @@ function Treatments() {
               profundo. O ácido aplicado causa uma descamação controlada,
               removendo as células danificadas.
             </ListItem>
+            <ListItem title="Liftera">
+              O Liftera é um ultrassom microfocado que estimula a produção de
+              colagenio e elastina, promovendo um efeito lifting e melhorando a
+              firmeza da pele. Além disso, também é utilizado para redução de
+              gordura localizada como na região da “papada”.
+            </ListItem>
           </List>
           <div className="sticky top-0 flex justify-center self-start lg:w-1/2 lg:justify-end lg:pl-12">
             <FadeIn className="w-[33.75rem] flex-none lg:w-[45rem]">
@@ -458,7 +464,7 @@ export default async function Home() {
 
       <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
-        client={{ name: 'Jose Cerqueira', photo: imageBlakeReid }}
+        client={{ name: 'Joao Amorim', photo: imageBlakeReid }}
       >
         Serviço excelente! Fiz um tratamento de medicina estética e fiquei muito
         satisfeito com os resultados. Equipa profissional e atenciosa. Recomendo

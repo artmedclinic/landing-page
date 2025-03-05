@@ -134,7 +134,7 @@ export default async function Work() {
 
       <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
-        client={{ name: 'Jose Cerqueira', photo: imageBlakeReid }}
+        client={{ name: 'Joao Amorim', photo: imageBlakeReid }}
       >
         Serviço excelente! Fiz um tratamento de medicina estética e fiquei muito
         satisfeito com os resultados. Equipa profissional e atenciosa. Recomendo
